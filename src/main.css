@@ -1,0 +1,81 @@
+/*
+  elm-hot creates an additional div wrapper around the app to make HMR possible.
+  This could break styling in development mode if you are using Elm UI.
+
+  More context in the issue:
+    https://github.com/halfzebra/create-elm-app/issues/320
+*/
+[data-elm-hot="true"] {
+  height: inherit;
+}
+
+
+body {
+        font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        color: #000;
+        padding: 1vw;
+        background: linear-gradient(90deg, rgba(221,115,27,1) 0%, rgba(57,57,228,1) 17%, rgba(207,208,145,1) 39%, rgba(114,12,191,1) 70%, rgba(2,230,78,1) 100%);
+}
+
+.container {
+        display: flex;
+}
+
+
+.column {
+        display: flex;
+        flex-direction: column;
+        padding: 1vw;
+        justify-content: flex-start;
+        margin: 1vw;
+}
+
+.row {
+        display: flex;
+        flex-direction: row;
+        padding: 1vw;
+        justify-content: space-around;
+}
+
+.blog-menu {
+        width: 10vw;
+        justify-content: start;
+}
+
+.blog-menu-item {
+        text-align: center;
+        padding: 0.5vw;
+}
+
+.menu-item-button {
+        border-radius: 5px;
+        border: none;
+        transition-duration: 0.4s;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        outline: none;
+        background: linear-gradient(90deg, rgba(255,116,0,0.28335084033613445) 0%, rgba(79,241,8,1) 100%);
+        width: 8vw;
+        height: 4vh;
+}
+
+.menu-item-button:hover {
+        background-color: #ff0;
+}
+
+.post * {
+        width: 75vw;
+}
+
+pre {
+        overflow: auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
